@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myapp">
+  <head>
+    <title>Bramble</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+  </head>
+  <body ng-controller="productController">
+    <h1>Bramble</h1>
+    <div>CRUD in AngularJS</div>
+
+    <table cellpadding="2" cellspacing="2">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      <tr ng-repeat="product in listProducts">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+      </tr>
+    </table>
+
+    <script type="text/javascript">
+          var myapp = angular.module('myapp', []);
+          myapp.controller('productController', function ($scope) {
+            $scope.listProducts = [
+              {id: 'p01', name: 'Product 1', price: 1000, quantity: 20},
+              {id: 'p02', name: 'Product 2', price: 2000, quantity: 21},
+              {id: 'p03', name: 'Product 3', price: 3000, quantity: 22},
+              {id: 'p04', name: 'Product 4', price: 4000, quantity: 23},
+            ];
+          });
+    </script>
+
+  </body>
+</html>
