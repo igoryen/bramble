@@ -7,14 +7,25 @@ myapp.controller('productController', function ($scope) {
     {id: 'p04', name: 'Product 4', price: 4000, quantity: 23},
   ];
 
+  /**
+   * Add an item to list
+   * @returns {undefined}
+   */
   $scope.add = function () {
     $scope.listProducts.push({
-      id: $scope.id, name: $scope.name, price: $scope.price, quantity: $scope.price
+      id: $scope.id, name: $scope.name, price: $scope.price, quantity: $scope.quantity
     });
     $scope.id = '';
     $scope.name = '';
     $scope.price = '';
     $scope.quantity = '';
+  };
+
+  $scope.edit = function () {
+    var index = getSelectedIndex($scope.id);
+    $scope.listProducts[index].name = $scope.name;
+    $scope.listProducts[index].price = $scope.price;
+    $scope.listProducts[index].quantity = $scope.quantity;
   };
 
   /**
