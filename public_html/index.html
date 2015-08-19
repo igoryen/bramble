@@ -35,6 +35,26 @@ and open the template in the editor.
       </tr>
     </table>
 
+    <h3>Product Information</h3>
+    <table cellpadding="2" cellspacing="2" border="1">
+      <tr>
+        <td>Id</td>
+        <td><input type="text" ng-model="id"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" ng-model="name"></td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="text" ng-model="price"></td>
+      </tr>
+      <tr>
+        <td>Quantity</td>
+        <td><input type="text" ng-model="quantity"></td>
+      </tr>
+    </table>
+
     <script type="text/javascript">
           var myapp = angular.module('myapp', []);
           myapp.controller('productController', function ($scope) {
