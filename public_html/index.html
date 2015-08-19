@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html ng-app="myapp">
   <head>
     <title>Bramble</title>
@@ -36,7 +32,7 @@ and open the template in the editor.
     </table>
 
     <h3>Product Information</h3>
-    <table cellpadding="2" cellspacing="2" border="1">
+    <table cellpadding="2" cellspacing="2">
       <tr>
         <td>Id</td>
         <td><input type="text" ng-model="id"></td>
@@ -52,6 +48,13 @@ and open the template in the editor.
       <tr>
         <td>Quantity</td>
         <td><input type="text" ng-model="quantity"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="button" value="Add" ng-click="add()">
+          <input type="button" value="save" ng-click="edit()">
+        </td>
       </tr>
     </table>
 
