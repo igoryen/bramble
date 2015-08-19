@@ -21,12 +21,17 @@ and open the template in the editor.
         <th>Name</th>
         <th>Price</th>
         <th>Quantity</th>
+        <th>Option</th>
       </tr>
       <tr ng-repeat="product in listProducts">
         <td>{{product.id}}</td>
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
         <td>{{product.quantity}}</td>
+        <td>
+          <a href="#" ng-click="del(product.id)">Delete</a> | 
+          <a href="#" ng-click="selectEdit(product.id)">Edit</a> | 
+        </td>
       </tr>
     </table>
 
